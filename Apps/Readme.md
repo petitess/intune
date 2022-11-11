@@ -66,6 +66,5 @@ https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool
 ### Or file path and version. 
 <img src="./pics/Bild11.png"/>
 
-###
-Choose a group for your workstations.
+### Choose a group for your workstations
 <img src="./pics/Bild12.png"/>
