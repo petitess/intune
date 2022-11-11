@@ -1,0 +1,7 @@
+5.5.7.8162
+Dator\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{57F514A0-50E6-463B-A1CB-F173B336F689}
+
+Install command
+teliatouchpoint_softphone.exe /q /norestart
+Uninstall command
+msiexec /x "{57F514A0-50E6-463B-A1CB-F173B336F689}" /q

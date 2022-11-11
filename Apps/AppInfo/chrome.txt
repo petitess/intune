@@ -1,0 +1,12 @@
+DETECTION
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{809F21F9-8D3A-3376-BC28-CD19E26DA000}
+
+UNINSTALL version 98.0.4758.102
+
+MsiExec.exe /x {809F21F9-8D3A-3376-BC28-CD19E26DA000} /qn
+
+INSTALL
+
+MsiExec.exe /i googlechromestandaloneenterprise64.msi /qn
