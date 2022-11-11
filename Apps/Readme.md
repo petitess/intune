@@ -39,3 +39,33 @@ Uninstall command
 https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool
 
 ### Prepare two folders “in” and “out”. Copy your application to “in” folder
+
+<img src="./pics/Bild1.png"/>
+
+### Now you can run IntuneWinAppUtil.exe as administrator
+<img src="./pics/Bild2.png"/>
+
+### It will run for a few seconds and the window will close. In “out” folder you should see a .intunewin file
+<img src="./pics/Bild3.png"/>
+
+### Now you can go to https://endpoint.microsoft.com/ > Apps > Windows. Click Add
+<img src="./pics/Bild4.png"/>
+
+### Choose Windows app (win32)
+<img src="./pics/Bild5.png"/>
+
+### Choose your .intunewin file
+<img src="./pics/Bild6.png"/>
+<img src="./pics/Bild7.png"/>
+<img src="./pics/Bild8.png"/>
+<img src="./pics/Bild9.png"/>
+
+### As detection rule you can use registry 
+<img src="./pics/Bild10.png"/>
+
+### Or file path and version. 
+<img src="./pics/Bild11.png"/>
+
+###
+Choose a group for your workstations.
+<img src="./pics/Bild12.png"/>
