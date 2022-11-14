@@ -1,0 +1,5 @@
+#Install
+bankid_installation.exe /S /v/qn
+
+#Uninstall
+MsiExec.exe /X{77B5BCDC-5496-48DA-8B16-5EE2AF08CA31} /qn
