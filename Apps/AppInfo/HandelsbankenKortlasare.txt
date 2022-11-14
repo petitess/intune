@@ -1,0 +1,5 @@
+#install
+setup.exe /s /f1 setup.iss
+
+#uninstall
+setup.exe /runfromtemp -10x001d -removeonly /s /f1 Usetup.iss
