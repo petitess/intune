@@ -2,6 +2,6 @@
 
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Install-Module Microsoft.Graph -Scope AllUsers
-Update-Module Microsoft.Graph
+Install-Module -Name Microsoft.Graph.Intune
+Update-Module Microsoft.Graph.Intune
 ```
