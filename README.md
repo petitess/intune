@@ -5,7 +5,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Install-Module -Name Microsoft.Graph.Intune
 Update-Module Microsoft.Graph.Intune
 Connect-MSGraph -AdminConsent
-Get-Command -module Microsoft.Graph.Intune | out-Griview
+Get-Command -module Microsoft.Graph.Intune
 ```
 ```
 (Get-IntuneManagedDevice).Value | select deviceName, userPrincipalName, model, osversion
