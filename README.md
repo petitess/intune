@@ -6,3 +6,7 @@ Install-Module -Name Microsoft.Graph.Intune
 Update-Module Microsoft.Graph.Intune
 Connect-MSGraph -AdminConsent
 ```
+```
+(Get-IntuneManagedDevice).Value | select deviceName, userPrincipalName, model, osversion
+((Get-IntuneManagedDevice).Value).count
+````
