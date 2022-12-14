@@ -1,0 +1,4 @@
+Windows MSI line-of-business app
+
+Command-line arguments
+/qn /norestart MSIRESTARTMANAGERCONTROL="Disable" ZoomAutoUpdate=”true” ZConfig="AutoUpdate=1;EnableSilentAutoUpdate=1;AlwaysCheckLatestVersion=1"
