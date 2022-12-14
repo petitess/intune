@@ -1,0 +1,15 @@
+https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD
+
+
+install:
+PowerToysSetup-0.65.0-x64.exe /quiet /feature-on
+
+uninstall:
+MsiExec.exe /X "{A15ACEAE-DA57-4B2D-9703-0F4903BD47E6}" /qn
+
+
+Detection:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{A15ACEAE-DA57-4B2D-9703-0F4903BD47E6}
+
+Group:
+Intune-WIN10-APPS-PowerToy
