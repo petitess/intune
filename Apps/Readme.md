@@ -61,6 +61,13 @@ https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool
 <img src="./pics/Bild9.png"/>
 
 ### As detection rule you can use registry 
+```
+Key path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B62C004F-C2D6-41AE-8E4B-005528869599}
+Value name: DisplayVersion
+Detection method: String comparison
+Operator: Equals
+Value: 3.66.5
+```
 <img src="./pics/Bild10.png"/>
 
 ### Or file path and version. 
