@@ -11,3 +11,14 @@
 - operator: Equals
 - value: 3.66.5
 ```
+##### Azure CLI
+```
+msiexec /i "azure-cli-2.59.0-x64.msi" /qn
+msiexec /x "{DEFB65A7-FD02-4710-B01E-6C9387982CA9}" /qn
+- detection rule: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{DEFB65A7-FD02-4710-B01E-6C9387982CA9}
+- key path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{DEFB65A7-FD02-4710-B01E-6C9387982CA9}
+- value name: DisplayVersion
+- detection method: String comparison
+- operator: Equals
+- value: 2.59.0
+```
