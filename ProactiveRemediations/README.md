@@ -18,3 +18,26 @@ Run this script using the logged-on credentials: No
 Enforce script signature check: No
 Run script in 64-bit PowerShell: No
 ```
+
+#### Remove rasphone.pbk
+##### Detection script
+```pwsh
+﻿$Path = "$env:HOMEPATH\AppData\Local\Packages\Microsoft.AzureVpn_8wekyb3d8bbwe\LocalState\rasphone.pbk"
+if (Test-Path -Path $Path) {
+    exit 1
+}
+else {
+    exit 0
+}
+```
+##### Remediation script file
+```pwsh
+﻿$Path = "$env:HOMEPATH\AppData\Local\Packages\Microsoft.AzureVpn_8wekyb3d8bbwe\LocalState\rasphone.pbk"
+Remove-Item $Path
+```
+##### Settings
+```s
+Run this script using the logged-on credentials: Yes
+Enforce script signature check: No
+Run script in 64-bit PowerShell: No
+```
