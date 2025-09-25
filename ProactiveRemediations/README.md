@@ -41,3 +41,71 @@ Run this script using the logged-on credentials: Yes
 Enforce script signature check: No
 Run script in 64-bit PowerShell: No
 ```
+
+#### Create Local Admin
+##### Detection script
+```pwsh
+$userName = “B3Admin”
+$userExists = (Get-LocalUser).Name -Contains $userName 
+if ($userExists) {  
+  Write-Host “$userName exists”  
+  Exit 0 
+}  
+Else { 
+  Write-Host “$userName does not exist.” 
+  Exit 1 
+} 
+```
+##### Remediation script file
+```pwsh
+$localUser = “B3Admin”
+$userExists = (Get-LocalUser).Name -Contains  $localUser
+$LocalAdminGroup = (Get-LocalGroup).Name -like "Administrat*"
+$EnrollmentID = Get-ScheduledTask | Where-Object { $_.TaskPath -like "*Microsoft*Windows*EnterpriseMgmt\*" } | Select-Object -ExpandProperty TaskPath -Unique | Where-Object { $_ -like "*-*-*" } | Split-Path -Leaf
+if($userExists -eq $false) { 
+  try{  
+     New-LocalUser -Name  $localUser -Description “B3 Admin LAPS” -NoPassword -AccountNeverExpires -UserMayNotChangePassword
+     Add-LocalGroupMember -Group “$LocalAdminGroup” -Member $localUser 
+     Start-Process -FilePath "C:\Windows\system32\deviceenroller.exe" -Wait -ArgumentList "/o $EnrollmentID /c /b"
+     Exit 0 
+   }    
+  Catch { 
+     Write-error $_ 
+     Exit 1 
+   } 
+} 
+```
+##### Settings
+```s
+Run this script using the logged-on credentials: No
+Enforce script signature check: No
+Run script in 64-bit PowerShell: Yes
+```
+#### Create shortcut
+##### Detection script
+```pwsh
+﻿if (test-path 'C:\Users\Public\Desktop\Visma RDP.lnk') 
+{
+    exit 0
+}
+else
+{
+    exit 1
+}
+```
+##### Remediation script file
+```pwsh
+﻿$IPofTargetMachine = '10.0.99.7'
+$wshshell = New-Object -ComObject WScript.Shell
+$lnk = $wshshell.CreateShortcut("C:\Users\Public\Desktop\Visma RDP.lnk")
+$lnk.TargetPath = "%windir%\system32\mstsc.exe"
+$lnk.Arguments = "/v:$IPofTargetMachine"
+$lnk.Description = "Visma RDP"
+$lnk.Save()
+```
+##### Settings
+```s
+Run this script using the logged-on credentials: No
+Enforce script signature check: No
+Run script in 64-bit PowerShell: No
+```
