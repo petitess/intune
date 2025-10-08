@@ -5,7 +5,7 @@ $AppLocker.AdditionalProperties.omaSettings
 $params = @{
     "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"
     description   = "Test"
-    displayName   = "Windows 11 AppLocker - DEV"
+    displayName   = "Windows 11 AppLocker - TEST"
     omaSettings   = @(
         @{
             "@odata.type" = "#microsoft.graph.omaSettingString"
