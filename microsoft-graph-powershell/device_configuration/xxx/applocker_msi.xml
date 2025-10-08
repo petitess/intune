@@ -1,0 +1,93 @@
+<RuleCollection Type="Msi" EnforcementMode="Enabled">
+	<FilePublisherRule Id="b7af7102-efde-4369-8a89-7a6a392d1473"
+		Name="Standardregel: Alla digitalt signerade Windows Installer-filer"
+		Description="Tillåter medlemmar i gruppen BUILTIN\Användare att köra digitalt signerade Windows Installer-filer."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePathRule Id="5b290184-345a-4453-b184-45305f6d9a54"
+		Name="Standardregel: Alla Windows Installer-filer i %systemdrive%\Windows\Installer"
+		Description="Tillåter medlemmar i gruppen BUILTIN\Användare att köra Windows Installer-filer i %systemdrive%\Windows\Installer."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%WINDIR%\Installer\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule Id="b928b756-b464-4a71-b4ee-980d1b31c641"
+		Name="Standardregel: Alla Windows Installer-filer i %OSDrive%\ProgramData\Hewlett-Packard\*"
+		Description="Tillåter medlemmar i gruppen BUILTIN\Användare att köra Windows Installer-filer i %OSDrive%\ProgramData\Hewlett-Packard\*"
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%OSDrive%\ProgramData\Hewlett-Packard\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule Id="c1e28d2b-d32a-4ffd-b9ff-a6b746725443"
+		Name="Standardregel: Alla HP Installer-filer i %OSDrive%\SWSetup\*"
+		Description="Tillåter medlemmar i gruppen BUILTIN\Användare att köra HP Installer-filer i %OSDrive%\SWSetup\*"
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="C:\SWSetup\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePublisherRule Id="5781c346-6a70-4a0d-a117-cfdc07614c87"
+		Name="HP: Signer rule for O=HP INC., L=PALO ALTO, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=HP INC., L=PALO ALTO, S=CALIFORNIA, C=US" ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePathRule Id="64ad46ff-0d71-4fa0-a30b-3f3d30c5433d"
+		Name="Standardregel: Alla Windows Installer-filer"
+		Description="Tillåter medlemmar i gruppen BUILTIN\Administratör att köra alla Windows Installer-filer."
+		UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="*.*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePublisherRule Id="128a3de0-4f93-44c9-9adf-2b22307e057e"
+		Name="WebEx: Signer rule for O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US" ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="7bdb0b73-c7ec-4b7a-949f-198bdb6624e2"
+		Name="WebEx: Signer rule for O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+				ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule Id="b34666ef-5f50-40c2-b180-c2fafa4875a7"
+		Name="Zoom: Signer rule for O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+				ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+</RuleCollection>

@@ -1,0 +1,289 @@
+<RuleCollection Type="Dll" EnforcementMode="Enabled">
+	<FilePathRule Id="bac4b0bf-6f1b-40e8-8627-8545fa89c8b6"
+		Name="(standardregel) Microsoft Windows-DLL"
+		Description="Tillåter medlemmar i gruppen Alla att läsa in DLL-filer som finns i Windows-mappen."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%WINDIR%\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="3737732c-99b7-41d4-9037-9cddfb0de0d0"
+		Name="(standardregel) Alla DLL:er som finns i mappen Program"
+		Description="Tillåter medlemmar i gruppen Alla att läsa in DLL-filer som finns i mappen Program."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="%PROGRAMFILES%\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="fe64f59f-6fca-45e5-a731-0f6715327c38" Name="(standardregel) Alla DLL:er"
+		Description="Tillåter medlemmar från den lokala administratörsgruppen att läsa in alla DLL-filer."
+		UserOrGroupSid="S-1-5-32-544" Action="Allow">
+		<Conditions>
+			<FilePathCondition Path="*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="9bfebfc0-73e1-4063-9283-769725cc13d3"
+		Name="Standardregel: Alla filer finns i mappen Windows Defender\*"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Windows Defender\*."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDrive%\ProgramData\Microsoft\Windows Defender\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="5dd5e715-5279-42d6-8d69-ebdabb382fc6"
+		Name="Standardregel: Alla filer finns i mappen Visma"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Visma."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDrive%\ProgramData\Visma\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="21bea9e6-9b47-4815-abcc-4044e96c13fc"
+		Name="Standardregel: Alla filer finns i mappen Lenovo"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Lenovo."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDrive%\ProgramData\Lenovo\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="1454612c-2003-4bdf-9dad-b7f11d1f695c"
+		Name="Standardregel: Alla filer finns i mappen HP SWSetup"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen HP SWSetup."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDrive%\SWSetup\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="d700eb3f-9227-4fa1-acd1-61e563b68c5f"
+		Name="Standardregel: Alla filer finns i mappen Windows"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Windows."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\PROGRAMS\MICROSOFT VS CODE\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="36ea8501-d995-483d-830c-24e936d02107"
+		Name="Standardregel: Alla filer finns i mappen AppData\Local\Apps\2.0"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen AppData\Local\Apps\2.0."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\USERS\*\AppData\Local\Apps\2.0\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="120b7155-9b0a-4d94-a70b-8d60a1226c54"
+		Name="Standardregel: Tillåter OneDrive DDLs i LocalAppdata att köras."
+		Description="Tillåter medlemmar i gruppen Alla att köra OneDrive DLLs"
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\Microsoft\OneDrive\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="3a78ca6f-38dc-4ed6-9047-07f34f3b7a10"
+		Name="Standardregel: Tillåter TeamsMeetingAdd-In DDLs i LocalAppdata att köras."
+		Description="Tillåter medlemmar i gruppen Alla att köra TeamsMeetingAdd-In DLLs"
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\Microsoft\TeamsMeetingAdd-in\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="4e3c41c3-336f-462b-9285-58f7e5536be4"
+		Name="Standardregel: Tillåter Alla DDLs i Roaming\Microsoft att köras."
+		Description="Tillåter medlemmar i gruppen Alla att köra Roaming\Microsoft DLLs"
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Roaming\Microsoft\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="631895a1-c7ce-4665-9f1f-e61d30b3a666"
+		Name="Standardregel: Alla filer finns i mappen Appdata\Local\Temp\.net\DYMO*"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Appdata\Local\Temp\.net\DYMO*."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\Temp\.net\DYMO*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="ec7bae4d-be31-4bca-880c-42f495db5dfb"
+		Name="Standardregel: Alla filer finns i mappen Appdata\Local\Temp\Deployment\*"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Appdata\Local\Temp\Deployment\*."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\Temp\Deployment\*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePathRule
+		Id="61b97b16-d86d-48b9-87ed-0bfeda871b43"
+		Name="Standardregel: Alla filer finns i mappen Appdata\Local\Temp\.net\Printix*"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Appdata\Local\Temp\.net\Printix*."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Local\Temp\.net\Printix*" />
+		</Conditions>
+	</FilePathRule>
+	<FilePublisherRule Id="55604d4c-9721-4488-82aa-3ecac964443a"
+		Name="WebEx: Signer rule for O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=CISCO WEBEX LLC, L=SAN JOSE, S=CALIFORNIA, C=US" ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="0479a2c9-73e2-405b-8050-6faa036f3270"
+		Name="WebEx: Signer rule for O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=CISCO SYSTEMS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+				ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="3ed7a589-e18c-40e7-ae8c-eb619e2f5d6d"
+		Name="WebEx VCRUNTIME140.dll: Signer rule for O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+				ProductName="*"
+				BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+
+	<FilePublisherRule
+		Id="5e956586-cbc8-448d-b346-932f935c0840"
+		Name="Zoom: Signer rule for O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+		Description="Information acquired from TrustedSigners.ps1" UserOrGroupSid="S-1-1-0"
+		Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=ZOOM VIDEO COMMUNICATIONS, INC., L=SAN JOSE, S=CALIFORNIA, C=US"
+				ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="b17a46f9-2ef4-42f1-9bc9-f463e8174197"
+		Name="Program Files: Postman signerad av O=POSTMAN, INC., L=SAN FRANCISCO, S=CALIFORNIA, C=US"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=POSTMAN, INC., L=SAN FRANCISCO, S=CALIFORNIA, C=US"
+				ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="591dcd46-ae01-4ba7-853f-dc736345b5e3"
+		Name="SABA Cornerstone Classroom App signerad av O=SABA SOFTWARE, INC., S=CALIFORNIA, C=US"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=SABA SOFTWARE, INC., S=CALIFORNIA, C=US"
+				ProductName="*" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="81f3c404-c8ba-4d50-bc1c-9c05841f2138"
+		Name="Program Files: JAVA(TM) PLATFORM SE 21.0.2 signerad av O=ORACLE AMERICA, INC., L=REDWOOD CITY, S=CALIFORNIA, C=US"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=ORACLE AMERICA, INC., L=REDWOOD CITY, S=CALIFORNIA, C=US"
+				ProductName="JAVA(TM) PLATFORM SE 21.0.2" BinaryName="*">
+				<BinaryVersionRange LowSection="21.0.2.00" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="cd53c4e8-658e-4c10-a33a-9d368f34d576"
+		Name="NVIDIA INSTALL APPLICATION signerad av O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+				ProductName="NVIDIA INSTALL APPLICATION" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="3d06cff6-6b8d-497f-ac8f-c4e82624dc99"
+		Name="EFRONT EXCEL signerad av O=E-FRONT SAS, L=PARIS, C=FR"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=E-FRONT SAS, L=PARIS, C=FR"
+				ProductName="EFRONT EXCEL" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePublisherRule
+		Id="91434ae8-6e9a-45a5-a7eb-1c4f80f146f1"
+		Name="Spotify signerad av O=SPOTIFY AB, L=STOCKHOLM, C=SE"
+		Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePublisherCondition
+				PublisherName="O=SPOTIFY AB, L=STOCKHOLM, C=SE"
+				ProductName="Spotify" BinaryName="*">
+				<BinaryVersionRange LowSection="*" HighSection="*" />
+			</FilePublisherCondition>
+		</Conditions>
+	</FilePublisherRule>
+	<FilePathRule
+		Id="3de35dd7-0544-4a2d-b9ad-2123c2840e89"
+		Name="Standardregel: Alla filer finns i mappen Appdata\Roaming\Centra\App\*"
+		Description="Tillåter medlemmar i gruppen Alla att köra program som finns i mappen Appdata\Roaming\Centra\App\*."
+		UserOrGroupSid="S-1-1-0" Action="Allow">
+		<Conditions>
+			<FilePathCondition
+				Path="%OSDRIVE%\Users\*\AppData\Roaming\Centra\App\*" />
+		</Conditions>
+	</FilePathRule>
+	<RuleCollectionExtensions>
+		<ThresholdExtensions>
+			<Services EnforcementMode="Enabled" />
+		</ThresholdExtensions>
+		<RedstoneExtensions />
+	</RuleCollectionExtensions>
+</RuleCollection>

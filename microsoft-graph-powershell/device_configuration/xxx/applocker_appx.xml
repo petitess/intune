@@ -1,0 +1,194 @@
+<RuleCollection Type="Appx" EnforcementMode="Enabled">
+    <FilePublisherRule Id="617edd5b-3360-4281-9724-21e453587fce"
+        Name="Alla Microsoft-signerade applikationspaket"
+        Description="Tillåter medlemmar i gruppen Alla att köra signerade applikationspaket."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition
+                PublisherName="CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+                ProductName="*" BinaryName="*">
+                <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="8f8442ba-a989-413a-a30d-ef68c322c50d"
+        Name="Alla Microsoft-signerade applikationspaket"
+        Description="Tillåter medlemmar i gruppen Alla att köra signerade applikationspaket."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition
+                PublisherName="CN=MICROSOFT WINDOWS, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"
+                ProductName="*" BinaryName="*">
+                <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="1e357e6b-d062-4424-86dc-ed9b3cdacb82"
+        Name="Vitlistning SuperOffice"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra SuperOffice."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition
+                PublisherName="CN=3D4C666B-B914-4234-B022-C7199741A84A"
+                ProductName="*" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="d2c94d7a-0d08-483f-8a03-5a43b8d84ffb"
+        Name="Vitlistning SuperOffice"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra SuperOffice."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition
+                PublisherName="O=SUPEROFFICE BUSINESS SOLUTIONS AB, L=GÖTEBORG, C=SE"
+                ProductName="*" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="aad66462-ef65-4595-9048-f5635fa6768f"
+        Name="Vitlistning AdobeNotificationClient"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra AdobeNotificationClient."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition
+                PublisherName="CN=ADOBE INC., OU=AAM 256, O=ADOBE INC., L=SAN JOSE, S=CA, C=US, SERIALNUMBER=2748129, OID.2.5.4.15=PRIVATE ORGANIZATION, OID.1.3.6.1.4.1.311.60.2.1.2=DELAWARE, OID.1.3.6.1.4.1.311.60.2.1.3=US"
+                ProductName="ADOBENOTIFICATIONCLIENT" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="db02c185-cb72-4dbb-870e-289141d38e96"
+        Name="Vitlistning HP Suppost Assistant"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra HP Support Assistant."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=ED346674-0FA1-4272-85CE-3187C9C86E26"
+                ProductName="AD2F1837.HPSupportAssistant" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="a076c044-4813-457c-91a1-2e88eec5483b"
+        Name="Vitlistning PDF Merger and Splitter"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra PDF Merger and Splitter."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=2D886990-E0EF-49F0-890F-D3E0BBCAB331"
+                ProductName="ANYWAYSOFTINC.PDFMERGERSPLITTER" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="9a2f9a52-d2d5-492c-9dd2-8d6f1751b457"
+        Name="Vitlistning iTunes"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra iTunes."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=5BD5593D-A41B-4F89-884E-B4F3E0FBAA75"
+                ProductName="APPLEINC.ITUNES" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="44b0c9d7-0d12-4ff1-aab9-fa2c13bf919c"
+        Name="Vitlistning HP Audio Control"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra HP Audio Control."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=83564403-0B26-46B8-9D84-040F43691D31"
+                ProductName="REALTEKSEMICONDUCTORCORP.HPAUDIOCONTROL" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="b8f99bfa-3bf6-4784-8f69-fe3c98d8da3a"
+        Name="Vitlistning HP System Information"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra HP System Information."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=ED346674-0FA1-4272-85CE-3187C9C86E26"
+                ProductName="AD2F1837.HPSYSTEMINFORMATION" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="c38f5462-51c6-4455-9054-754515678d71"
+        Name="Vitlistning IntelGraphicsExperience"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra IntelGraphicsExperience."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=EB51A5DA-0E72-4863-82E4-EA21C1F8DFE3"
+                ProductName="APPUP.INTELGRAPHICSEXPERIENCE" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="4fe8f3c2-cb42-43c0-a29b-61df098a9d04"
+        Name="Vitlistning IntelGraphicsExperience"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra IntelGraphicsExperience."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=33F0F141-36F3-4EC2-A77D-51B53D0BA0E4"
+                ProductName="CLIPCHAMP.CLIPCHAMP" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="ab0068b6-8927-4fd9-9940-c39f887b7de1"
+        Name="Vitlistning HP Presence Aware"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra HP Presence Aware."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=ED346674-0FA1-4272-85CE-3187C9C86E26"
+                ProductName="AD2F1837.HPPRESENCEAWARE" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="a3e92baf-e43d-4dc4-9459-1bccf285b97e"
+        Name="Vitlistning Yubico Authenticator"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra Yubico Authenticator."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=3E612EC1-46FB-46C1-ADB7-25B13FB02B10"
+                ProductName="YUBICOAB.YUBICOAUTHENTICATOR" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="fec87f1a-b027-4308-94f2-bc8020d778ee"
+        Name="Vitlistning Lenovo Vantage"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra Lenovo Vantage."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=8F32EFB2-B494-4AEC-A27C-4B0736252363"
+                ProductName="E046963F.LENOVOSETTINGSFORENTERPRISE" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="59759631-d64f-4912-bd0c-c0d6cd88244d"
+        Name="Vitlistning Dolby Laboratories"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra Dolby Laboratories."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=58D26209-1D57-482C-B403-B655571B5C7B"
+                ProductName="DOLBYLABORATORIES.DOLBYACCESS" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="925ef808-640f-4a30-b909-fa6ba3b36511"
+        Name="Vitlistning SPOTIFYAB.SPOTIFYMUSIC"
+        Description="Tillåter medlemmar i gruppen Alla att installera och köra SPOTIFYAB.SPOTIFYMUSIC."
+        UserOrGroupSid="S-1-1-0" Action="Allow">
+        <Conditions>
+            <FilePublisherCondition PublisherName="CN=453637B3-4E12-4CDF-B0D3-2A3C863BF6EF"
+                ProductName="SPOTIFYAB.SPOTIFYMUSIC" BinaryName="*">
+                <BinaryVersionRange LowSection="*" HighSection="*" />
+            </FilePublisherCondition>
+        </Conditions>
+    </FilePublisherRule>
+</RuleCollection>
