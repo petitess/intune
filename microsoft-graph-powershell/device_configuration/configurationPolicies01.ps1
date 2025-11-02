@@ -1,5 +1,5 @@
 Connect-Graph -Scopes DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All, DeviceManagementScripts.ReadWrite.All
-
+#https://github.com/microsoftgraph/microsoft-graph-docs-contrib/blob/main/api-reference/beta/api/intune-deviceconfigv2-devicemanagementconfigurationpolicy-update.md
 $baseUri = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies" 
 
 # Get all configuration policies
