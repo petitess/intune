@@ -19,7 +19,7 @@ Invoke-MgGraphRequest -Method POST -Uri $baseUri -Body $JsonContent
 $Patch = @"
 {
   "name": "Abc Security Baseline",
-  "description": "Abc Security Baseline for 24H2 Updated",
+  "description": "Security Baseline for 24H2 Updated",
 }
 "@
 #No support for updating settings for this endpoint

@@ -1,6 +1,6 @@
 {
   "name": "Abc Security Baseline",
-  "description": "Abc Security Baseline for 24H2",
+  "description": "Security Baseline for 24H2 Test",
   "settings": [
     {
       "id": "0",
