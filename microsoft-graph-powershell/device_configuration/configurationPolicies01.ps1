@@ -24,3 +24,16 @@ $Patch = @"
 "@
 #No support for updating settings for this endpoint
 Invoke-MgGraphRequest -Method PATCH -Uri "$baseUri/7522e1ee-0bbf-4f2a-a9c3-17b68dc5cb10" -Body $Patch 
+
+#Get the new policy
+$Policy = (Invoke-MgGraphRequest -Method GET -Uri "$baseUri/7522e1ee-0bbf-4f2a-a9c3-17b68dc5cb10?`$expand=settings") 
+$Policy.description = "Security Baseline for 24H2 Updated using PUT"
+#Get a setting
+$Setting = $Policy.settings | Where-Object { $_.id -eq "210" }
+$Setting | ConvertTo-Json -Depth 100
+$Policy.templateReference.templateId = $null
+#Update the setting
+$Setting.settingInstance.choiceSettingValue.value = "device_vendor_msft_policy_config_dataprotection_allowdirectmemoryaccess_1"
+$Policy.settings[210] | ConvertTo-Json -Depth 100
+$JsonContent = $Policy | ConvertTo-Json -Depth 100
+Invoke-MgGraphRequest -Method PUT -Uri "$baseUri/7522e1ee-0bbf-4f2a-a9c3-17b68dc5cb10" -Body $JsonContent
