@@ -4,18 +4,26 @@ Download exe file for your BIOS version
 
 Extract sp123456.exe 
 
-Take the content and prepare the app by using the IntuneWinAppUtil.exe
+Put the content in a folder "G40110"
+
+Prepare the app and powershell script by using the IntuneWinAppUtil.exe
 
 Upload intunewin file in intune
 
 ##### Program
 ```s
 Install command
-HpFirmwareUpdRec.exe  -f "V90_01100000.bin" -s -b
+powershell.exe -ExecutionPolicy Bypass -file Install.ps1 -Mode Install 
 Uninstall command
-HpFirmwareUpdRec.exe  -f "V90_01100000.bin" -s -b
+powershell.exe -ExecutionPolicy Bypass -file Install.ps1 -Mode Uninstall 
+Installation time required (mins)
+60
+Allow available uninstall
+Yes
+Install behavior
+System
 Device restart behavior
-Intune will force a mandatory device restart
+App install may force a device restart
 ```
 ##### Requirements
 ```s
@@ -47,4 +55,37 @@ Operator
 Equals
 Value
 V90 Ver. 01.10.00
+```
+##### Script
+```pwsh
+Param(
+  [Parameter(Mandatory = $true)]
+  [ValidateSet("Install", "Uninstall")]
+  [String[]]
+  $Mode
+)
+
+## För att installera:
+## powershell.exe -ExecutionPolicy Bypass -file Install.ps1 -Mode Install 
+
+## För att avinstallera:
+## powershell.exe -ExecutionPolicy Bypass -file Install.ps1 -Mode Uninstall 
+
+If ($Mode -eq "Install") {
+  # Installerar...
+  
+  Copy-Item -Path "G40110" -Destination "C:\Program Files" -Recurse -Force
+ 
+  Start-Process -FilePath "C:\Program Files\G40110\HpFirmwareUpdRec.exe" -ArgumentList "/s /b /r" -Wait
+
+  Restart-Computer -Force
+}
+ 
+If ($Mode -eq "Uninstall") {
+  # Avinstallerar...
+
+}
+
+
+
 ```
