@@ -1,0 +1,38 @@
+{
+  "Assignments": null,
+  "CreatedDateTime": "2025-04-03T11:34:54.8695129Z",
+  "Description": "Allows users to set Screen Recording for Microsoft Teams",
+  "DeviceSettingStateSummaries": null,
+  "DeviceStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "DeviceStatuses": null,
+  "DisplayName": "macOS - PPPC - Microsoft Teams Screen Recording",
+  "Id": "2b70ff23-5de2-4f39-95ef-070bebab40d0",
+  "LastModifiedDateTime": "2025-04-22T11:22:32.4038688Z",
+  "UserStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "UserStatuses": null,
+  "Version": 2,
+  "AdditionalProperties": {
+    "@odata.type": "#microsoft.graph.macOSCustomConfiguration",
+    "payloadName": "MSTeamsSR",
+    "payloadFileName": "MSTeamsSR.mobileconfig",
+    "payload": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+UGF5bG9hZENvbnRlbnQ8L2tleT4KCTxhcnJheT4KCQk8ZGljdD4KCQkJPGtleT5QYXlsb2FkRGVzY3JpcHRpb248L2tleT4KCQkJPHN0cmluZz5NU1RlYW1zU1I8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkRGlzcGxheU5hbWU8L2tleT4KCQkJPHN0cmluZz5NU1RlYW1zU1I8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkSWRlbnRpZmllcjwva2V5PgoJCQk8c3RyaW5nPjQ5Nzg5NEFELUYwNjktNEU5Qi1BMzU3LTczNjU2MUZCRTc2Mjwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRPcmdhbml6YXRpb248L2tleT4KCQkJPHN0cmluZz5TU0c8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkVHlwZTwva2V5PgoJCQk8c3RyaW5nPmNvbS5hcHBsZS5UQ0MuY29uZmlndXJhdGlvbi1wcm9maWxlLXBvbGljeTwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRVVUlEPC9rZXk+CgkJCTxzdHJpbmc+QzJFQkNDRjgtODlGNy00MEE1LTg3QTEtREE5QjU5MUY3RUY0PC9zdHJpbmc+CgkJCTxrZXk+UGF5bG9hZFZlcnNpb248L2tleT4KCQkJPGludGVnZXI+MTwvaW50ZWdlcj4KCQkJPGtleT5TZXJ2aWNlczwva2V5PgoJCQk8ZGljdD4KCQkJCTxrZXk+U2NyZWVuQ2FwdHVyZTwva2V5PgoJCQkJPGFycmF5PgoJCQkJCTxkaWN0PgoJCQkJCQk8a2V5PkF1dGhvcml6YXRpb248L2tleT4KCQkJCQkJPHN0cmluZz5BbGxvd1N0YW5kYXJkVXNlclRvU2V0U3lzdGVtU2VydmljZTwvc3RyaW5nPgoJCQkJCQk8a2V5PkNvZGVSZXF1aXJlbWVudDwva2V5PgoJCQkJCQk8c3RyaW5nPmlkZW50aWZpZXIgImNvbS5taWNyb3NvZnQudGVhbXMyIiBhbmQgYW5jaG9yIGFwcGxlIGdlbmVyaWMgYW5kIGNlcnRpZmljYXRlIDFbZmllbGQuMS4yLjg0MC4xMTM2MzUuMTAwLjYuMi42XSAvKiBleGlzdHMgKi8gYW5kIGNlcnRpZmljYXRlIGxlYWZbZmllbGQuMS4yLjg0MC4xMTM2MzUuMTAwLjYuMS4xM10gLyogZXhpc3RzICovIGFuZCBjZXJ0aWZpY2F0ZSBsZWFmW3N1YmplY3QuT1VdID0gVUJGOFQzNDZHOTwvc3RyaW5nPgoJCQkJCQk8a2V5PkNvbW1lbnQ8L2tleT4KCQkJCQkJPHN0cmluZz48L3N0cmluZz4KCQkJCQkJPGtleT5JZGVudGlmaWVyPC9rZXk+CgkJCQkJCTxzdHJpbmc+Y29tLm1pY3Jvc29mdC50ZWFtczI8L3N0cmluZz4KCQkJCQkJPGtleT5JZGVudGlmaWVyVHlwZTwva2V5PgoJCQkJCQk8c3RyaW5nPmJ1bmRsZUlEPC9zdHJpbmc+CgkJCQkJPC9kaWN0PgoJCQkJPC9hcnJheT4KCQkJPC9kaWN0PgoJCTwvZGljdD4KCTwvYXJyYXk+Cgk8a2V5PlBheWxvYWREZXNjcmlwdGlvbjwva2V5PgoJPHN0cmluZz5NU1RlYW1zU1I8L3N0cmluZz4KCTxrZXk+UGF5bG9hZERpc3BsYXlOYW1lPC9rZXk+Cgk8c3RyaW5nPk1TVGVhbXNTUjwvc3RyaW5nPgoJPGtleT5QYXlsb2FkSWRlbnRpZmllcjwva2V5PgoJPHN0cmluZz40OTc4OTRBRC1GMDY5LTRFOUItQTM1Ny03MzY1NjFGQkU3NjI8L3N0cmluZz4KCTxrZXk+UGF5bG9hZE9yZ2FuaXphdGlvbjwva2V5PgoJPHN0cmluZz5TU0c8L3N0cmluZz4KCTxrZXk+UGF5bG9hZFNjb3BlPC9rZXk+Cgk8c3RyaW5nPlN5c3RlbTwvc3RyaW5nPgoJPGtleT5QYXlsb2FkVHlwZTwva2V5PgoJPHN0cmluZz5Db25maWd1cmF0aW9uPC9zdHJpbmc+Cgk8a2V5PlBheWxvYWRVVUlEPC9rZXk+Cgk8c3RyaW5nPkMzM0QyMkM0LUNEMTctNEM3Ri05QTdBLTkwMTFCNzBFMDNGQzwvc3RyaW5nPgoJPGtleT5QYXlsb2FkVmVyc2lvbjwva2V5PgoJPGludGVnZXI+MTwvaW50ZWdlcj4KPC9kaWN0Pgo8L3BsaXN0Pgo="
+  }
+}

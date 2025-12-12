@@ -1,0 +1,38 @@
+{
+  "Assignments": null,
+  "CreatedDateTime": "2024-04-12T07:24:47.5111612Z",
+  "Description": null,
+  "DeviceSettingStateSummaries": null,
+  "DeviceStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "DeviceStatuses": null,
+  "DisplayName": "macOS - MDE BackgroundServices",
+  "Id": "2ccb6981-70e4-4433-af95-e3323c71d141",
+  "LastModifiedDateTime": "2024-06-14T11:24:23.7341333Z",
+  "UserStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "UserStatuses": null,
+  "Version": 2,
+  "AdditionalProperties": {
+    "@odata.type": "#microsoft.graph.macOSCustomConfiguration",
+    "payloadName": "BackgoundServices-prod-macOS-Default-MDE",
+    "payloadFileName": "BackgroundServices.xml",
+    "payload": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhRE9DVFlQRSBwbGlzdCBQVUJMSUMgIi0vL0FwcGxlLy9EVEQgUExJU1QgMS4wLy9FTiIgImh0dHA6Ly93d3cuYXBwbGUuY29tL0RURHMvUHJvcGVydHlMaXN0LTEuMC5kdGQiPg0KPHBsaXN0IHZlcnNpb249IjEiPg0KPGRpY3Q+DQo8a2V5PlBheWxvYWRVVUlEPC9rZXk+DQo8c3RyaW5nPjY5REQ5ODI1LTA2N0ItNEM2Qy04QjU0LUVEQTgzQzdGMTc5RDwvc3RyaW5nPg0KPGtleT5QYXlsb2FkVHlwZTwva2V5Pg0KPHN0cmluZz5Db25maWd1cmF0aW9uPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRPcmdhbml6YXRpb248L2tleT4NCjxzdHJpbmc+TWljcm9zb2Z0IENvcnBvcmF0aW9uPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRJZGVudGlmaWVyPC9rZXk+DQo8c3RyaW5nPmNvbS5taWNyb3NvZnQud2Rhdi5iYWNrZ3JvdW5kPC9zdHJpbmc+DQo8a2V5PlBheWxvYWREaXNwbGF5TmFtZTwva2V5Pg0KPHN0cmluZz5EZWZlbmRlciAtIEJhY2tncm91bmQgU2VydmljZXM8L3N0cmluZz4NCjxrZXk+UGF5bG9hZERlc2NyaXB0aW9uPC9rZXk+DQo8c3RyaW5nLz4NCjxrZXk+UGF5bG9hZFZlcnNpb248L2tleT4NCjxpbnRlZ2VyPjE8L2ludGVnZXI+DQo8a2V5PlBheWxvYWRFbmFibGVkPC9rZXk+DQo8dHJ1ZS8+DQo8a2V5PlBheWxvYWRSZW1vdmFsRGlzYWxsb3dlZDwva2V5Pg0KPHRydWUvPg0KPGtleT5QYXlsb2FkU2NvcGU8L2tleT4NCjxzdHJpbmc+U3lzdGVtPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRDb250ZW50PC9rZXk+DQo8YXJyYXk+DQo8ZGljdD4NCjxrZXk+UGF5bG9hZERlc2NyaXB0aW9uPC9rZXk+DQo8c3RyaW5nPkJhY2tncm91bmQgU2VydmljZSBNYW5hZ2VtZW50IGZvciBNaWNyb3NvZnQgRGVmZW5kZXI8L3N0cmluZz4NCjxrZXk+UGF5bG9hZElkZW50aWZpZXI8L2tleT4NCjxzdHJpbmc+NERCOTYyNzYtMjMxMC00NEMyLUFFMTEtQzZFNzYxRkIwMzA0LnByaXZhY3kuMDQxMDI0ODEtQzFGMS00NEYyLUI1NDgtRTBCNTU0ODkwNDkzPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRVVUlEPC9rZXk+DQo8c3RyaW5nPkE5QkY4RkE5LUNFQTMtNDJBMi1COEMxLUUxOTk4Qjg0Q0JCMDwvc3RyaW5nPg0KPGtleT5SdWxlczwva2V5Pg0KPGFycmF5Pg0KPGRpY3Q+DQo8a2V5PlJ1bGVUeXBlPC9rZXk+DQo8c3RyaW5nPkxhYmVsUHJlZml4PC9zdHJpbmc+DQo8a2V5PlJ1bGVWYWx1ZTwva2V5Pg0KPHN0cmluZz5jb20ubWljcm9zb2Z0LmZyZXNubzwvc3RyaW5nPg0KPC9kaWN0Pg0KPGRpY3Q+DQo8a2V5PlJ1bGVUeXBlPC9rZXk+DQo8c3RyaW5nPkxhYmVsUHJlZml4PC9zdHJpbmc+DQo8a2V5PlJ1bGVWYWx1ZTwva2V5Pg0KPHN0cmluZz5jb20ubWljcm9zb2Z0LmRscDwvc3RyaW5nPg0KPC9kaWN0Pg0KPC9hcnJheT4NCjxrZXk+UGF5bG9hZFR5cGU8L2tleT4NCjxzdHJpbmc+Y29tLmFwcGxlLnNlcnZpY2VtYW5hZ2VtZW50PC9zdHJpbmc+DQo8a2V5PlBheWxvYWREaXNwbGF5TmFtZTwva2V5Pg0KPHN0cmluZz5CYWNrZ3JvdW5kIFNlcnZpY2UgTWFuYWdlbWVudCBmb3IgTWljcm9zb2Z0IERlZmVuZGVyPC9zdHJpbmc+DQo8L2RpY3Q+DQo8L2FycmF5Pg0KPC9kaWN0Pg0KPC9wbGlzdD4="
+  }
+}

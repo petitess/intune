@@ -1,0 +1,38 @@
+{
+  "Assignments": null,
+  "CreatedDateTime": "2025-05-05T08:07:17.550828Z",
+  "Description": null,
+  "DeviceSettingStateSummaries": null,
+  "DeviceStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "DeviceStatuses": null,
+  "DisplayName": "macOS - DNS Settings",
+  "Id": "cfd7c904-cdf3-49a3-b163-98fcb9137fca",
+  "LastModifiedDateTime": "2025-05-05T08:07:17.550828Z",
+  "UserStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "UserStatuses": null,
+  "Version": 1,
+  "AdditionalProperties": {
+    "@odata.type": "#microsoft.graph.macOSCustomConfiguration",
+    "payloadName": "DNSsettings",
+    "payloadFileName": "set-dnssettings.mobileconfig",
+    "payload": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KICA8a2V5PlBheWxvYWRDb250ZW50PC9rZXk+CiAgPGFycmF5PgogICAgPGRpY3Q+CiAgICAgIDxrZXk+UGF5bG9hZFR5cGU8L2tleT4KICAgICAgPHN0cmluZz5jb20uYXBwbGUuZG5zU2V0dGluZ3MubWFuYWdlZDwvc3RyaW5nPgogICAgICA8a2V5PkROUzwva2V5PgogICAgICA8ZGljdD4KICAgICAgICA8a2V5PlNlcnZlckFkZHJlc3Nlczwva2V5PgogICAgICAgIDxhcnJheT4KICAgICAgICAgIDxzdHJpbmc+OC44LjguODwvc3RyaW5nPgogICAgICAgICAgPHN0cmluZz4xLjEuMS4xPC9zdHJpbmc+CiAgICAgICAgPC9hcnJheT4KICAgICAgPC9kaWN0PgogICAgICA8a2V5PlBheWxvYWRJZGVudGlmaWVyPC9rZXk+CiAgICAgIDxzdHJpbmc+Y29tLnlvdXJvcmcuZG5zPC9zdHJpbmc+CiAgICAgIDxrZXk+UGF5bG9hZFVVSUQ8L2tleT4KICAgICAgPHN0cmluZz5VVUlELUdPRVMtSEVSRTwvc3RyaW5nPgogICAgICA8a2V5PlBheWxvYWRWZXJzaW9uPC9rZXk+CiAgICAgIDxpbnRlZ2VyPjE8L2ludGVnZXI+CiAgICAgIDxrZXk+UGF5bG9hZERpc3BsYXlOYW1lPC9rZXk+CiAgICAgIDxzdHJpbmc+RE5TIFNldHRpbmdzPC9zdHJpbmc+CiAgICA8L2RpY3Q+CiAgPC9hcnJheT4KICA8a2V5PlBheWxvYWRUeXBlPC9rZXk+CiAgPHN0cmluZz5Db25maWd1cmF0aW9uPC9zdHJpbmc+CiAgPGtleT5QYXlsb2FkSWRlbnRpZmllcjwva2V5PgogIDxzdHJpbmc+Y29tLnlvdXJvcmcuZG5zY29uZmlnPC9zdHJpbmc+CiAgPGtleT5QYXlsb2FkVVVJRDwva2V5PgogIDxzdHJpbmc+QU5PVEhFUi1VVUlELUhFUkU8L3N0cmluZz4KICA8a2V5PlBheWxvYWRWZXJzaW9uPC9rZXk+CiAgPGludGVnZXI+MTwvaW50ZWdlcj4KICA8a2V5PlBheWxvYWREaXNwbGF5TmFtZTwva2V5PgogIDxzdHJpbmc+RE5TIENvbmZpZzwvc3RyaW5nPgo8L2RpY3Q+CjwvcGxpc3Q+Cg=="
+  }
+}

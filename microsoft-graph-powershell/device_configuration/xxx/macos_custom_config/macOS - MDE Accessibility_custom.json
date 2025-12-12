@@ -1,0 +1,38 @@
+{
+  "Assignments": null,
+  "CreatedDateTime": "2024-04-12T07:27:35.2806467Z",
+  "Description": null,
+  "DeviceSettingStateSummaries": null,
+  "DeviceStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "DeviceStatuses": null,
+  "DisplayName": "macOS - MDE Accessibility",
+  "Id": "afa8c227-91ef-4aaf-a355-f9bc9742c657",
+  "LastModifiedDateTime": "2024-06-14T11:23:19.7805063Z",
+  "UserStatusOverview": {
+    "ConfigurationVersion": null,
+    "ErrorCount": null,
+    "FailedCount": null,
+    "Id": null,
+    "LastUpdateDateTime": null,
+    "NotApplicableCount": null,
+    "PendingCount": null,
+    "SuccessCount": null
+  },
+  "UserStatuses": null,
+  "Version": 2,
+  "AdditionalProperties": {
+    "@odata.type": "#microsoft.graph.macOSCustomConfiguration",
+    "payloadName": "Accessibility-prod-macOS-Default-MDE",
+    "payloadFileName": "Accessibility.xml",
+    "payload": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhRE9DVFlQRSBwbGlzdCBQVUJMSUMgIi0vL0FwcGxlLy9EVEQgUExJU1QgMS4wLy9FTiIgImh0dHA6Ly93d3cuYXBwbGUuY29tL0RURHMvUHJvcGVydHlMaXN0LTEuMC5kdGQiPg0KPHBsaXN0IHZlcnNpb249IjEiPg0KPGRpY3Q+DQo8a2V5PlBheWxvYWRVVUlEPC9rZXk+DQo8c3RyaW5nPjFDMTQ2MzA0LURGNUItNDFGMi04QUQ0LTE3RUE5QTk1RDA5NTwvc3RyaW5nPg0KPGtleT5QYXlsb2FkVHlwZTwva2V5Pg0KPHN0cmluZz5Db25maWd1cmF0aW9uPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRPcmdhbml6YXRpb248L2tleT4NCjxzdHJpbmc+TWljcm9zb2Z0IENvcnBvcmF0aW9uPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRJZGVudGlmaWVyPC9rZXk+DQo8c3RyaW5nPmNvbS5taWNyb3NvZnQud2Rhdi50Y2MuYWNjZXNzaWJpbGl0eTwvc3RyaW5nPg0KPGtleT5QYXlsb2FkRGlzcGxheU5hbWU8L2tleT4NCjxzdHJpbmc+RGVmZW5kZXIgLSBBY2Nlc3NpYmlsaXR5IEFjY2Vzczwvc3RyaW5nPg0KPGtleT5QYXlsb2FkRGVzY3JpcHRpb248L2tleT4NCjxzdHJpbmcvPg0KPGtleT5QYXlsb2FkVmVyc2lvbjwva2V5Pg0KPGludGVnZXI+MTwvaW50ZWdlcj4NCjxrZXk+UGF5bG9hZEVuYWJsZWQ8L2tleT4NCjx0cnVlLz4NCjxrZXk+UGF5bG9hZFJlbW92YWxEaXNhbGxvd2VkPC9rZXk+DQo8dHJ1ZS8+DQo8a2V5PlBheWxvYWRTY29wZTwva2V5Pg0KPHN0cmluZz5TeXN0ZW08L3N0cmluZz4NCjxrZXk+UGF5bG9hZENvbnRlbnQ8L2tleT4NCjxhcnJheT4NCjxkaWN0Pg0KPGtleT5QYXlsb2FkVVVJRDwva2V5Pg0KPHN0cmluZz5FMjNDQTRCRS02NUJBLTQ2ODUtODlENi0wNDFGODI5OTQ2MDY8L3N0cmluZz4NCjxrZXk+UGF5bG9hZFR5cGU8L2tleT4NCjxzdHJpbmc+Y29tLmFwcGxlLlRDQy5jb25maWd1cmF0aW9uLXByb2ZpbGUtcG9saWN5PC9zdHJpbmc+DQo8a2V5PlBheWxvYWRPcmdhbml6YXRpb248L2tleT4NCjxzdHJpbmc+TWljcm9zb2Z0IENvcnBvcmF0aW9uPC9zdHJpbmc+DQo8a2V5PlBheWxvYWRJZGVudGlmaWVyPC9rZXk+DQo8c3RyaW5nPkUyM0NBNEJFLTY1QkEtNDY4NS04OUQ2LTA0MUY4Mjk5NDYwNjwvc3RyaW5nPg0KPGtleT5QYXlsb2FkRGlzcGxheU5hbWU8L2tleT4NCjxzdHJpbmc+UHJpdmFjeSBQcmVmZXJlbmNlcyBQb2xpY3kgQ29udHJvbDwvc3RyaW5nPg0KPGtleT5QYXlsb2FkRGVzY3JpcHRpb248L2tleT4NCjxzdHJpbmcvPg0KPGtleT5QYXlsb2FkVmVyc2lvbjwva2V5Pg0KPGludGVnZXI+MTwvaW50ZWdlcj4NCjxrZXk+UGF5bG9hZEVuYWJsZWQ8L2tleT4NCjx0cnVlLz4NCjxrZXk+U2VydmljZXM8L2tleT4NCjxkaWN0Pg0KPGtleT5BY2Nlc3NpYmlsaXR5PC9rZXk+DQo8YXJyYXk+DQo8ZGljdD4NCjxrZXk+SWRlbnRpZmllcjwva2V5Pg0KPHN0cmluZz5jb20ubWljcm9zb2Z0LmRscC5kYWVtb248L3N0cmluZz4NCjxrZXk+Q29kZVJlcXVpcmVtZW50PC9rZXk+DQo8c3RyaW5nPmlkZW50aWZpZXIgImNvbS5taWNyb3NvZnQuZGxwLmRhZW1vbiIgYW5kIGFuY2hvciBhcHBsZSBnZW5lcmljIGFuZCBjZXJ0aWZpY2F0ZSAxW2ZpZWxkLjEuMi44NDAuMTEzNjM1LjEwMC42LjIuNl0gLyogZXhpc3RzICovIGFuZCBjZXJ0aWZpY2F0ZSBsZWFmW2ZpZWxkLjEuMi44NDAuMTEzNjM1LjEwMC42LjEuMTNdIC8qIGV4aXN0cyAqLyBhbmQgY2VydGlmaWNhdGUgbGVhZltzdWJqZWN0Lk9VXSA9IFVCRjhUMzQ2Rzk8L3N0cmluZz4NCjxrZXk+SWRlbnRpZmllclR5cGU8L2tleT4NCjxzdHJpbmc+YnVuZGxlSUQ8L3N0cmluZz4NCjxrZXk+U3RhdGljQ29kZTwva2V5Pg0KPGludGVnZXI+MDwvaW50ZWdlcj4NCjxrZXk+QWxsb3dlZDwva2V5Pg0KPGludGVnZXI+MTwvaW50ZWdlcj4NCjwvZGljdD4NCjwvYXJyYXk+DQo8L2RpY3Q+DQo8L2RpY3Q+DQo8L2FycmF5Pg0KPC9kaWN0Pg0KPC9wbGlzdD4="
+  }
+}
