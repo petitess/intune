@@ -1,0 +1,171 @@
+{
+  "name": "macOS - PPPC - Logi - Bluetooth",
+  "description": "",
+  "settings": [
+    {
+      "id": "0",
+      "settingInstance": {
+        "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
+        "auditRuleInformation": null,
+        "groupSettingCollectionValue": [
+          {
+            "settingValueTemplateReference": null,
+            "children": [
+              {
+                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services",
+                "auditRuleInformation": null,
+                "groupSettingCollectionValue": [
+                  {
+                    "settingValueTemplateReference": null,
+                    "children": [
+                      {
+                        "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways",
+                        "auditRuleInformation": null,
+                        "groupSettingCollectionValue": [
+                          {
+                            "settingValueTemplateReference": null,
+                            "children": [
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_allowed",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_allowed_true"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_coderequirement",
+                                "auditRuleInformation": null,
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "simpleSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "value": "identifier \"com.logi.cp-dev-mgr\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QED4VVPZWA",
+                                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                                },
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifier",
+                                "auditRuleInformation": null,
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "simpleSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "value": "com.logi.cp-dev-mgr",
+                                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                                },
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifiertype",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifiertype_0"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_staticcode",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_staticcode_false"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              }
+                            ]
+                          },
+                          {
+                            "settingValueTemplateReference": null,
+                            "children": [
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_allowed",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_allowed_true"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_coderequirement",
+                                "auditRuleInformation": null,
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "simpleSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "value": "identifier \"com.logi.optionsplus\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QED4VVPZWA",
+                                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                                },
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifier",
+                                "auditRuleInformation": null,
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "simpleSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "value": "com.logi.optionsplus",
+                                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                                },
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifiertype",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_identifiertype_0"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              },
+                              {
+                                "settingDefinitionId": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_staticcode",
+                                "auditRuleInformation": null,
+                                "choiceSettingValue": {
+                                  "settingValueTemplateReference": null,
+                                  "children": [],
+                                  "value": "com.apple.tcc.configuration-profile-policy_services_bluetoothalways_item_staticcode_false"
+                                },
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingInstanceTemplateReference": null
+                              }
+                            ]
+                          }
+                        ],
+                        "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+                        "settingInstanceTemplateReference": null
+                      }
+                    ]
+                  }
+                ],
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+                "settingInstanceTemplateReference": null
+              }
+            ]
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ],
+  "platforms": "macOS",
+  "technologies": "mdm,appleRemoteManagement",
+  "templateReference": {
+    "templateFamily": "none",
+    "templateDisplayVersion": null,
+    "templateDisplayName": null,
+    "templateId": ""
+  }
+}

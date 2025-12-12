@@ -1,0 +1,28 @@
+{
+  "name": "macOS - DNS Server",
+  "description": "",
+  "settings": [
+    {
+      "id": "0",
+      "settingInstance": {
+        "settingDefinitionId": "com.apple.managedclient.preferences_builtindnsclientenabled",
+        "auditRuleInformation": null,
+        "choiceSettingValue": {
+          "settingValueTemplateReference": null,
+          "children": [],
+          "value": "com.apple.managedclient.preferences_builtindnsclientenabled_true"
+        },
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ],
+  "platforms": "macOS",
+  "technologies": "mdm,appleRemoteManagement",
+  "templateReference": {
+    "templateFamily": "none",
+    "templateDisplayVersion": null,
+    "templateDisplayName": null,
+    "templateId": ""
+  }
+}

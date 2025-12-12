@@ -1,0 +1,67 @@
+{
+  "name": "macOS - ABR - System Extension Settings Catalog",
+  "description": "",
+  "settings": [
+    {
+      "id": "0",
+      "settingInstance": {
+        "settingDefinitionId": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+        "auditRuleInformation": null,
+        "groupSettingCollectionValue": [
+          {
+            "settingValueTemplateReference": null,
+            "children": [
+              {
+                "settingDefinitionId": "com.apple.system-extension-policy_allowedsystemextensions",
+                "auditRuleInformation": null,
+                "groupSettingCollectionValue": [
+                  {
+                    "settingValueTemplateReference": null,
+                    "children": [
+                      {
+                        "settingDefinitionId": "com.apple.system-extension-policy_allowedsystemextensions_generickey",
+                        "auditRuleInformation": null,
+                        "simpleSettingCollectionValue": [
+                          {
+                            "settingValueTemplateReference": null,
+                            "value": "com.fasttracksoftware.adminbyrequest.extension",
+                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                          }
+                        ],
+                        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+                        "settingInstanceTemplateReference": null
+                      },
+                      {
+                        "settingDefinitionId": "com.apple.system-extension-policy_allowedsystemextensions_generickey_keytobereplaced",
+                        "auditRuleInformation": null,
+                        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                        "simpleSettingValue": {
+                          "settingValueTemplateReference": null,
+                          "value": "AU2ALARPUP",
+                          "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                        },
+                        "settingInstanceTemplateReference": null
+                      }
+                    ]
+                  }
+                ],
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+                "settingInstanceTemplateReference": null
+              }
+            ]
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ],
+  "platforms": "macOS",
+  "technologies": "mdm,appleRemoteManagement",
+  "templateReference": {
+    "templateFamily": "none",
+    "templateDisplayVersion": null,
+    "templateDisplayName": null,
+    "templateId": ""
+  }
+}
