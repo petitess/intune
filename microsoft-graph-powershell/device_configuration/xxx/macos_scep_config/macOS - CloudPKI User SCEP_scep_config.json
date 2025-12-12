@@ -1,0 +1,45 @@
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/deviceConfigurations/$entity",
+  "allowAllAppsAccess": true,
+  "subjectAlternativeNameFormatString": null,
+  "@odata.type": "#microsoft.graph.macOSScepCertificateProfile",
+  "extendedKeyUsages": [
+    {
+      "objectIdentifier": "1.3.6.1.5.5.7.3.2",
+      "name": "Client Authentication"
+    }
+  ],
+  "hashAlgorithm": null,
+  "certificateValidityPeriodValue": 1,
+  "subjectNameFormatString": "CN=SSG\\{{UserName}}",
+  "renewalThresholdPercentage": 20,
+  "keySize": "size4096",
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "description": null,
+  "supportsScopeTags": true,
+  "subjectNameFormat": "custom",
+  "deploymentChannel": null,
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "certificateValidityPeriodScale": "years",
+  "id": "f0897c0c-b2cb-49e0-93b7-ba5428423316",
+  "scepServerUrls": [
+    "https://{{CloudPKIFQDN}}/TrafficGateway/PassThroughRoutingService/CloudPki/CloudPkiService/Scep/75844149-54c1-4b70-847c-b9607e90b1b5/1f9199cc-2432-4a9e-885a-b94fa2b73530"
+  ],
+  "version": 3,
+  "keyUsage": "keyEncipherment,digitalSignature",
+  "lastModifiedDateTime": "2024-10-18T13:46:25.5514342Z",
+  "createdDateTime": "2024-10-09T12:19:20.6974196Z",
+  "displayName": "macOS - CloudPKI User SCEP",
+  "customSubjectAlternativeNames": [
+    {
+      "sanType": "userPrincipalName",
+      "name": "{{UserPrincipalName}}"
+    }
+  ],
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "subjectAlternativeNameType": null,
+  "certificateStore": "user"
+}
