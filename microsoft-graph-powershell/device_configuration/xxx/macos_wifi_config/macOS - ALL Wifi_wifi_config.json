@@ -1,0 +1,28 @@
+{
+  "supportsScopeTags": true,
+  "ssid": "ABCprod",
+  "version": 3,
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "wiFiSecurityType": "wpaPersonal",
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "@odata.type": "#microsoft.graph.macOSWiFiConfiguration",
+  "proxyManualAddress": null,
+  "description": "",
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "proxyAutomaticConfigurationUrl": null,
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/deviceConfigurations/$entity",
+  "lastModifiedDateTime": "2024-06-14T12:34:49.1082504Z",
+  "createdDateTime": "2019-01-07T15:32:20.1523593Z",
+  "deploymentChannel": null,
+  "connectAutomatically": true,
+  "id": "f42e7c05-c357-4989-9575-c5b1849548ba",
+  "preSharedKey": null,
+  "proxySettings": "none",
+  "proxyManualPort": null,
+  "displayName": "macOS - ALL Wifi",
+  "connectWhenNetworkNameIsHidden": false,
+  "networkName": "b3d73218-fc12-4ed8-a443-81f9d86105c6"
+}

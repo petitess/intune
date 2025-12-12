@@ -1,0 +1,36 @@
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/deviceConfigurations/$entity",
+  "@odata.type": "#microsoft.graph.macOSEnterpriseWiFiConfiguration",
+  "trustedServerCertificateNames": [
+    "radsec-SSG.radius-as-a-service.com"
+  ],
+  "proxyManualAddress": null,
+  "connectAutomatically": true,
+  "ssid": "ABCX",
+  "innerAuthenticationProtocolForEapTtls": null,
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "description": null,
+  "supportsScopeTags": true,
+  "eapType": "eapTls",
+  "eapFastConfiguration": null,
+  "networkName": "7377c6c7-a5fe-4cd7-8b00-8eb817504fc1",
+  "connectWhenNetworkNameIsHidden": false,
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "outerIdentityPrivacyTemporaryValue": "anonymous",
+  "proxySettings": "none",
+  "id": "6808c921-0c1a-496f-bb3f-3e5ae0b033f7",
+  "proxyManualPort": null,
+  "deploymentChannel": null,
+  "version": 3,
+  "preSharedKey": null,
+  "lastModifiedDateTime": "2024-10-03T09:10:50.0254566Z",
+  "authenticationMethod": "certificate",
+  "createdDateTime": "2024-10-02T13:52:56.3987902Z",
+  "displayName": "macOS - ABCX",
+  "proxyAutomaticConfigurationUrl": null,
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "wiFiSecurityType": "wpaEnterprise"
+}
