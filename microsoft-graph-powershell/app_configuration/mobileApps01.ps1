@@ -8,31 +8,34 @@ $headersITG = @{
     "Content-Type" = "application/vnd.api+json"
 }
 
-$ExistingDocuments = (Invoke-RestMethod -Method GET -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents?filter[document_folder_id]=1994796736495784" -Headers $headersITG).data.id
+$ExistingDocuments = (Invoke-RestMethod -Method GET -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents?filter[document_folder_id]=1994796736495784" -Headers $headersITG).data
 
+Write-Output "Found $($ExistingDocuments.Count) documents"
+
+$data = @()
 $ExistingDocuments | ForEach-Object {
-    if ($null -ne $Apps -and $null -ne $ExistingDocuments) {
-        Write-Output "Removing existing entities from folder Install"
-        $bodyRemove = @{
-            data = @(
-                @{
-                    type       = "documents"
-                    attributes = @{
-                        organization_id    = "1657795960619208"
-                        id                 = $_
-                        document_folder_id = "1994796736495784"
-                    }
-                }
-            )
-        } | ConvertTo-Json -Depth 100
+    $data += @{
+        type       = "documents"
+        attributes = @{
+            organization_id    = "1657795960619208"
+            id                 = $_.id
+            document_folder_id = "1994796736495784"
+        }
+    }
+}
+if ($null -ne $Apps -and $null -ne $ExistingDocuments) {
+    
+    $bodyRemove = @{
+        data = $data
+    } | ConvertTo-Json -Depth 100
 
-        $Remove = (Invoke-RestMethod -Method Delete -Uri "https://api.eu.itglue.com/organizations/1657795960619208/relationships/documents" -Headers $headersITG  -Body $bodyRemove)
-        $Remove
+    $Remove = (Invoke-RestMethod -Method Delete -Uri "https://api.eu.itglue.com/organizations/1657795960619208/relationships/documents" -Headers $headersITG  -Body $bodyRemove)
+    if ($null -ne $Remove) {
+        Write-Output "Removed documents"
     }
-    else {
-        Write-Output "Could not recieve intune apps or folder Install is empty"
-        return
-    }
+}else {
+    Write-Output "Could not recieve intune apps or folder Install is empty"
+    return
 }
 
 $Apps | ForEach-Object {
