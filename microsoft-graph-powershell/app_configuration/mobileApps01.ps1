@@ -1,6 +1,8 @@
 # Connect-MgGraph -Identity
 #DeviceManagementConfiguration.Read.All DeviceManagementApps.Read.All
 $Apps = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps").value
+#$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq '10 Edge Compatibility CRMSites'").value
+
 Write-Output "Found $($Apps.Count) apps"
 
 $headersITG = @{
@@ -8,7 +10,7 @@ $headersITG = @{
     "Content-Type" = "application/vnd.api+json"
 }
 
-$ExistingDocuments = (Invoke-RestMethod -Method GET -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents?filter[document_folder_id]=1994796736495784" -Headers $headersITG).data
+$ExistingDocuments = (Invoke-RestMethod -Method GET -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents?filter[document_folder_id]=1994796736495784&page[size]=300" -Headers $headersITG).data
 
 Write-Output "Found $($ExistingDocuments.Count) documents"
 
@@ -17,7 +19,7 @@ $ExistingDocuments | ForEach-Object {
     $data += @{
         type       = "documents"
         attributes = @{
-            organization_id    = "1657795960619208"
+            organization_id    = "1234567890123456"
             id                 = $_.id
             document_folder_id = "1994796736495784"
         }
@@ -29,18 +31,19 @@ if ($null -ne $Apps -and $null -ne $ExistingDocuments) {
         data = $data
     } | ConvertTo-Json -Depth 100
 
-    $Remove = (Invoke-RestMethod -Method Delete -Uri "https://api.eu.itglue.com/organizations/1657795960619208/relationships/documents" -Headers $headersITG  -Body $bodyRemove)
+    $Remove = (Invoke-RestMethod -Method Delete -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents" -Headers $headersITG  -Body $bodyRemove)
     if ($null -ne $Remove) {
         Write-Output "Removed documents"
     }
-}else {
+}
+else {
     Write-Output "Could not recieve intune apps or folder Install is empty"
     return
 }
 
 $Apps | ForEach-Object {
     $App = $_
-    Write-Output "Creating document for $($App.displayName)"
+    Write-Warning "Creating document for: $($App.displayName)"
 
     $bodyNewDoc = @{
         data = @{
@@ -62,9 +65,7 @@ $Apps | ForEach-Object {
 <div>Name: $($App.displayName)</div>
 <div>Version: $($App.displayVersion)</div>
 <div>Publisher: $($App.publisher)</div>
-<div>Description: $($App.description)</div>
 <div>Category: $($App.category)</div>
-<div>notes: $($App.notes)</div>
 "@
 
     $Program = @"
@@ -93,6 +94,11 @@ $Apps | ForEach-Object {
     $Dependencies = @"
 <div>dependentAppCount: $($App.dependentAppCount)</div>
 <div>supersedingAppCount: $($App.supersedingAppCount)</div>
+"@
+
+    $Other = @"
+<div>Description: $($App.description)</div>
+<div>Notes: $($App.notes)</div>
 "@
 
     $AssignmentInfo = @()
@@ -130,6 +136,15 @@ $Apps | ForEach-Object {
         @{
             resource_type = "Document::Heading"
             content       = "Assignments"
+            level         = 2
+        }
+        @{
+            resource_type = "Document::Text"
+            content       = "<p>$($Other)</p>"
+        }
+        @{
+            resource_type = "Document::Heading"
+            content       = "Other"
             level         = 2
         }
         @{
@@ -184,6 +199,7 @@ $Apps | ForEach-Object {
     )
 
     $sections | ForEach-Object {
+        Write-Output "Section show: $($_.content)" -Verbose -Debug
         $bodyText = @{
             data = @{
                 type       = "document-sections"
@@ -195,13 +211,21 @@ $Apps | ForEach-Object {
             }
         } | ConvertTo-Json -Depth 100
 
-        (Invoke-RestMethod -Method Post -Uri "https://api.eu.itglue.com/documents/$($New.id)/relationships/sections" -Headers $headersITG -Body $bodyText).data
+
+        try {
+            $Section = (Invoke-RestMethod -Method Post -Uri "https://api.eu.itglue.com/documents/$($New.id)/relationships/sections" -Headers $headersITG -Body $bodyText).data
+            Write-Output "Section added."
+        }
+        catch {
+            Write-Output "Section failed: $($_.Exception.Message). $($_.Exception.InnerException.Message). $($_.Exception.StackTrace)"
+        }
     }
 
-    $Publish = (Invoke-RestMethod -Method Patch -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents/$($New.id)/publish" -Headers $headersITG)
-    
-    if ($null -ne $Publish) {
-        "Published document for $($App.displayName)"
+    try {
+        $Publish = (Invoke-RestMethod -Method Patch -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents/$($New.id)/publish" -Headers $headersITG)
+    }
+    catch {
+        Write-Output "Publishing failed: $($_.Exception.Message). $($_.Exception.InnerException.Message). $($_.Exception.StackTrace)"
     }
 }
 
