@@ -1,7 +1,7 @@
 # Connect-MgGraph -Identity
 #DeviceManagementConfiguration.Read.All DeviceManagementApps.Read.All
 $Apps = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps").value
-$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq 'Caesar Document ActiveX 7.0.2.0 TLS'").value
+#$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq 'Caesar Document ActiveX 7.0.2.0 TLS'").value
 
 Write-Output "Found $($Apps.Count) apps"
 
