@@ -1,7 +1,7 @@
 # Connect-MgGraph -Identity
 #DeviceManagementConfiguration.Read.All DeviceManagementApps.Read.All
 $Apps = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps").value
-#$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq '10 Edge Compatibility CRMSites'").value
+$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq 'Caesar Document ActiveX 7.0.2.0 TLS'").value
 
 Write-Output "Found $($Apps.Count) apps"
 
@@ -104,8 +104,10 @@ $Apps | ForEach-Object {
     $AssignmentInfo = @()
     $Assignments = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($App.id)/assignments").value
     $Assignments | ForEach-Object {
-        $Group = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/groups/$($_.target.groupId)").displayName
-        $AssignmentInfo += @"
+
+        try {
+            $Group = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/groups/$($_.target.groupId)").displayName
+            $AssignmentInfo += @"
     <div>
     <table>
         <tbody>
@@ -126,6 +128,10 @@ $Apps | ForEach-Object {
   <div><br type="_moz"></div>
 </div>
 "@
+        }
+        catch {
+            Write-Output "Group not found: $($_.Exception.Message). $($_.Exception.InnerException.Message). $($_.Exception.StackTrace)"
+        }
     }
 
     $sections = @(
