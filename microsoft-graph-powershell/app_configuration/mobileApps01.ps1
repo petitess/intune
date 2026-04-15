@@ -1,13 +1,13 @@
 # Connect-MgGraph -Identity
 #DeviceManagementConfiguration.Read.All DeviceManagementApps.Read.All
 $Apps = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps").value
-#$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq 'Caesar Document ActiveX 7.0.2.0 TLS'").value
+$App = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=displayName eq 'Caesar Document ActiveX 7.0.2.0 TLS'").value
 
 Write-Output "Found $($Apps.Count) apps"
 
 $headersITG = @{
     "x-api-key"    = "ITG.123.abcd"
-    "Content-Type" = "application/vnd.api+json"
+    "Content-Type" = "application/vnd.api+json; charset=utf-8"
 }
 
 $ExistingDocuments = (Invoke-RestMethod -Method GET -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents?filter[document_folder_id]=1994796736495784&page[size]=300" -Headers $headersITG).data
@@ -57,6 +57,7 @@ $Apps | ForEach-Object {
             }
         }
     } | ConvertTo-Json -Depth 100
+    $bodyNewDoc = [System.Text.Encoding]::UTF8.GetBytes($bodyNewDoc)
 
 
     $New = (Invoke-RestMethod -Method Post -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents" -Headers $headersITG -Body $bodyNewDoc).data
@@ -216,6 +217,7 @@ $Apps | ForEach-Object {
                 }
             }
         } | ConvertTo-Json -Depth 100
+        $bodyText = [System.Text.Encoding]::UTF8.GetBytes($bodyText)
 
 
         try {
