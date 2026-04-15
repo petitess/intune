@@ -229,6 +229,7 @@ $Apps | ForEach-Object {
 
     try {
         $Publish = (Invoke-RestMethod -Method Patch -Uri "https://api.eu.itglue.com/organizations/1234567890123456/relationships/documents/$($New.id)/publish" -Headers $headersITG)
+        Write-Warning "Published document: $($App.displayName)"
     }
     catch {
         Write-Output "Publishing failed: $($_.Exception.Message). $($_.Exception.InnerException.Message). $($_.Exception.StackTrace)"
