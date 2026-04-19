@@ -108,6 +108,12 @@ $Apps | ForEach-Object {
 
         try {
             $Group = (Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/groups/$($_.target.groupId)").displayName
+            if($_.id -like "acacacac-9df4-4c7d-9d50-4ef0226f57a9*") {
+                $Group = "All Users"
+            }
+            if($_.id -like "adadadad-808e-44e2-905a-0b7873a8a531*") {
+                $Group = "All Devices"
+            }
             $AssignmentInfo += @"
     <div>
     <table>
