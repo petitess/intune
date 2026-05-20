@@ -4,9 +4,9 @@ Connect-Graph -Scopes DeviceManagementConfiguration.Read.All, DeviceManagementCo
 ```
 ### Authenticate to Microsoft Graph PowerShell using secret - Invoke-RestMethod
 ```pwsh
-$appid = "abc"
-$tenantid = 'def'
-$secret = 'ghi'
+$appid = $env:mg_x_root_01_id
+$tenantid = $env:x_tenant
+$secret = $env:mg_x_root_01_secret
 $body =  @{
     Grant_Type    = "client_credentials"
     Scope         =  "https://graph.microsoft.com/.default"
