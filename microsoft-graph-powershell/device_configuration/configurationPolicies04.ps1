@@ -20,10 +20,10 @@ $all | Select-Object name, id, @{
     Expression = { $_.templateReference.templateId }
 }
 #Create a new policy with settings
-$GroupId = "12345a12-b851-4d3b-9f7b-fb768c1a9799"
-$XmlFiles = Get-ChildItem -Path ".\Supplemental\*\*.xml"
+$groupId = "12345a12-b851-4d3b-9f7b-fb768c1a9799"
+$xmlFiles = Get-ChildItem -Path ".\Supplemental\*\*.xml"
 
-$XmlFiles[0..4] | ForEach-Object {
+$xmlFiles[0..4] | ForEach-Object {
     $xmlContent = Get-Content -Path $_.FullName
     $_.Name
     Write-Host "Processing file: $($_.FullName)"
@@ -96,7 +96,7 @@ $XmlFiles[0..4] | ForEach-Object {
             @{
                 "target" = @{
                     "@odata.type" = "#microsoft.graph.groupAssignmentTarget"
-                    "groupId"     = $GroupId
+                    "groupId"     = $groupId
                 }
             }
         )
