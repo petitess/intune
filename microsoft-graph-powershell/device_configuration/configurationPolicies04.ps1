@@ -20,50 +20,90 @@ $all | Select-Object name, id, @{
     Expression = { $_.templateReference.templateId }
 }
 #Create a new policy with settings
-$xmlContent = Get-Content -Path "C:\Users\Karol\Desktop\AppControl.xml"
-$body = @{
-    "name"              = "test-app-control"
-    "description"       = ""
-    "settings"          = @(
-        @{
-            "settingInstance" = @{
-                "@odata.type"                      = "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance"
-                "choiceSettingValue"               = @{
-                    "@odata.type"                   = "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue"
-                    "children"                      = @(
-                        @{
-                            "@odata.type"         = "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance"
-                            "simpleSettingValue"  = @{
-                                "@odata.type" = "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
-                                "value"       = "$xmlContent"
+$GroupId = "12345a12-b851-4d3b-9f7b-fb768c1a9799"
+$XmlFiles = Get-ChildItem -Path ".\Supplemental\*\*.xml"
+
+$XmlFiles[0..4] | ForEach-Object {
+    $xmlContent = Get-Content -Path $_.FullName
+    $_.Name
+    Write-Host "Processing file: $($_.FullName)"
+    $policyName = "1.Windows 11 Supplemental $($_.BaseName)"
+    Write-Host "Policy Name: $policyName"
+    $body = @{
+        "name"              = $policyName
+        "description"       = "Updated by pipeline on $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+        "settings"          = @(
+            @{
+                "settingInstance" = @{
+                    "@odata.type"                      = "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance"
+                    "choiceSettingValue"               = @{
+                        "@odata.type"                   = "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue"
+                        "children"                      = @(
+                            @{
+                                "@odata.type"         = "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance"
+                                "simpleSettingValue"  = @{
+                                    "@odata.type" = "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                                    "value"       = "$xmlContent"
+                                }
+                                "settingDefinitionId" = "device_vendor_msft_policy_config_applicationcontrolv2_xmlupload"
                             }
-                            "settingDefinitionId" = "device_vendor_msft_policy_config_applicationcontrolv2_xmlupload"
+                        )
+                        "settingValueTemplateReference" = @{
+                            "settingValueTemplateId" = "8e9847a2-8a1b-4168-a5fc-4a99cd8cd480"
                         }
-                    )
-                    "settingValueTemplateReference" = @{
-                        "settingValueTemplateId" = "8e9847a2-8a1b-4168-a5fc-4a99cd8cd480"
+                        "value"                         = "device_vendor_msft_policy_config_applicationcontrolv2_buildoptions_upload_xml_selected"
                     }
-                    "value"                         = "device_vendor_msft_policy_config_applicationcontrolv2_buildoptions_upload_xml_selected"
-                }
-                "settingDefinitionId"              = "device_vendor_msft_policy_config_applicationcontrolv2_buildoptions"
-                "settingInstanceTemplateReference" = @{
-                    "settingInstanceTemplateId" = "abc5b8cd-63a0-4a1c-a34d-da84d9a93f62"
+                    "settingDefinitionId"              = "device_vendor_msft_policy_config_applicationcontrolv2_buildoptions"
+                    "settingInstanceTemplateReference" = @{
+                        "settingInstanceTemplateId" = "abc5b8cd-63a0-4a1c-a34d-da84d9a93f62"
+                    }
                 }
             }
+        )
+        "roleScopeTagIds"   = @(
+            "0"
+        )
+        "platforms"         = "windows10"
+        "technologies"      = "mdm"
+        "templateReference" = @{
+            "templateId" = "d3849ba8-bf95-467c-9640-aa2334eae9e3_1"
         }
-    )
-    "roleScopeTagIds"   = @(
-        "0"
-    )
-    "platforms"         = "windows10"
-    "technologies"      = "mdm"
-    "templateReference" = @{
-        "templateId" = "d3849ba8-bf95-467c-9640-aa2334eae9e3_1"
     }
-}
 
-$uri = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies"
-(Invoke-MgGraphRequest -Method POST -Uri $uri -Body $body)
+    $uriExisting = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies?`$filter=templateReference/templateFamily eq 'endpointSecurityApplicationControl'"
+    $all = @()
+    do {
+        $resp = Invoke-MgGraphRequest -Method GET -Uri $uriExisting
+        $all += $resp.value
+        $uriExisting = $resp.'@odata.nextLink'
+    } while ($uriExisting)
+
+    $policyExisting = $all | Where-Object { $_.name -eq "$policyName" } 
+
+    if ($policyExisting) {
+        Write-Warning "Policy already exists. ID: $($policyExisting.id). Updating..."
+        (Invoke-MgGraphRequest -Method PUT -Uri "$uri/$($policyExisting.id)" -Body $body)
+    }
+    else {
+        Write-Warning "Policy does not exist. Creating..."
+        $uri = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies"
+        (Invoke-MgGraphRequest -Method POST -Uri $uri -Body $body)
+    }
+
+    $uriAssign = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies/$($policyExisting.id)/assign"
+    $body = @{
+        "assignments" = @(
+            @{
+                "target" = @{
+                    "@odata.type" = "#microsoft.graph.groupAssignmentTarget"
+                    "groupId"     = $GroupId
+                }
+            }
+        )
+    }
+    $resp = Invoke-MgGraphRequest -Method POST -Uri $uriAssign -Body $body
+    $resp 
+}
 
 $xml = @"
 <?xml version="1.0" encoding="utf-8"?>
